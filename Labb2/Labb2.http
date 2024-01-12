@@ -1,0 +1,73 @@
+@Labb2_HostAddress = https://localhost:7206
+
+
+
+
+POST {{Labb2_HostAddress}}/api/books/BookWithNewAuthor
+Content-Type: application/json
+
+{
+  "isbn": 1000,
+  "newAuthorDTO": {
+    "firstName": "JK",
+    "lastName": "Rowling"
+  },
+  "newAuthorDTO": {
+    "firstName": "Homer",
+    "lastName": "Simpson"
+  },
+  "newAuthorDTO": {
+    "firstName": "Stephen",
+    "lastName": "King"
+  },
+  "title": "A Book About Authors",
+  "publicationYear": 2005,
+  "rating": 4
+}
+###
+
+POST {{Labb2_HostAddress}}/api/books/BookWithNewAuthor
+Content-Type: application/json
+
+{
+  "isbn": 6172,
+  "newAuthorDTOs": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson"
+    },
+    {
+      "firstName": "Marge",
+      "lastName": "Simpson"
+    }
+  ],
+  "title": "A book about strangling your child",
+  "publicationYear": 1994,
+  "rating": 5
+}
+
+
+###
+
+POST {{Labb2_HostAddress}}/api/books/BookWithExistingAuthor
+Content-Type: application/json
+
+{
+  "isbn": 0000,
+  "authorIDs": [
+    0
+  ],
+  "title": "string",
+  "publicationYear": 0,
+  "rating": 0
+}
+
+###
+
+GET {{Labb2_HostAddress}}/api/authors
+
+###
+
+GET {{Labb2_HostAddress}}/api/books
+
+###
